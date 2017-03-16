@@ -5,7 +5,7 @@
 @Last modified by:   webmaster-fazio
 @Last modified time: 16-03-2017
 -->
-<img src="https://camo.githubusercontent.com/dfb47c8fd89796ded8fcedaa09883d67297cf58b/687474703a2f2f636c6f75646f6b692e636f6d2f696d616765732f6672616d65776f726b732f696f6e69632e706e67" height="150px"> <img src="http://combiboilersleeds.com/images/plus/plus-1.jpg" height="100px"> <img src="https://avatars2.githubusercontent.com/u/16272733?v=3&s=200" height="150px"> <img src="http://combiboilersleeds.com/images/plus/plus-1.jpg" height="100px"> <img src="https://lh3.googleusercontent.com/TMqvJdxi8bUMcux_bRQeGUkN4qhSNio1Katx7GSxI5cX7wyuv_nFssaBb1DJ3FcLc0N1OqxpDLy7ln8LXdbeiCS5MwEAr3g=s688" height="150px" >
+<img src="https://camo.githubusercontent.com/dfb47c8fd89796ded8fcedaa09883d67297cf58b/687474703a2f2f636c6f75646f6b692e636f6d2f696d616765732f6672616d65776f726b732f696f6e69632e706e67" height="150px"> <img src="https://image.freepik.com/icones-gratuites/signe-plus_318-54005.jpg" height="100px"> <img src="https://avatars2.githubusercontent.com/u/16272733?v=3&s=200" height="150px"> <img src="https://image.freepik.com/icones-gratuites/signe-plus_318-54005.jpg" height="100px"> <img src="https://lh3.googleusercontent.com/TMqvJdxi8bUMcux_bRQeGUkN4qhSNio1Katx7GSxI5cX7wyuv_nFssaBb1DJ3FcLc0N1OqxpDLy7ln8LXdbeiCS5MwEAr3g=s688" height="150px" >
 
 # Ionic 2 + ngRx state management / ngRx effects + AngularFire
 Implement of ngRx Store/effect management in a Ionic 2 application with AngularFire
