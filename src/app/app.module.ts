@@ -12,6 +12,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 // Import App Components & Pages
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ItemPage } from "../pages/item/item";
 
 // Import ngrx Tools
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -34,7 +35,8 @@ import { AFB_API_KEY } from "./apikey-config";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ItemPage
   ],
   imports: [
     AngularFireModule.initializeApp(AFB_API_KEY /*, FIREBASE_AUTH_CONFIG*/),
@@ -46,7 +48,8 @@ import { AFB_API_KEY } from "./apikey-config";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ItemPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

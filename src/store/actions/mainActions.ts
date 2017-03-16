@@ -51,6 +51,12 @@ export class MainActions {
   static GET_FIREBASE_ARRAY_FAILED:string = "GET_FIREBASE_ARRAY_FAILED"
 
   static GET_FIREBASE_OBJECT:string = "GET_FIREBASE_OBJECT";
+  get_fb_object(dbPath:string){
+    return <Action>{
+        type: MainActions.GET_FIREBASE_OBJECT,
+        payload: { path: dbPath }
+    }
+  }
   static GET_FIREBASE_OBJECT_SUCCESS:string = "GET_FIREBASE_OBJECT_SUCCESS";
   static GET_FIREBASE_OBJECT_FAILED:string = "GET_FIREBASE_OBJECT_FAILED"
 
