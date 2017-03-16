@@ -18,9 +18,7 @@ Hop is help you to start your project on the right way.
 ## Prerequisites
 - NVM - [Download](https://github.com/creationix/nvm) & Install Node Version Manage
 - NodeJS 7 - Download & Install Node.js and the npm package manager with NVM `$ nvm install node 7`.
-- MongoDB - [Download](https://www.mongodb.com) & Install MongoDB, and make sure it's running on the default port (27017).
 - [Typescript](https://www.npmjs.com/package/typescript) Latest stable version install in Global `$ npm install -g typescript`
-- [Nodemon](https://nodemon.io/) Latest stable version install in Global `$ npm install -g nodemon`
 - [Ionic 2](https://ionicframework.com/) & [Cordova](https://cordova.apache.org/) - Latest stable version install in Global `$ npm install -g ionic cordova`
 - Some knowledge of [AngularFire2](https://github.com/angular/angularfire2)
 - Some knowledge of [Reactive Programming](http://reactivex.io/) with [ngRx](https://github.com/ngrx) and [ngRx/store](https://github.com/ngrx/store) + [ngRx/effects](https://github.com/ngrx/effects)
