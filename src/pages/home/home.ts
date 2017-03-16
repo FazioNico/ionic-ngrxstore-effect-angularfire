@@ -16,7 +16,8 @@ import { Observable } from 'rxjs/Rx';
 import { AppStateI } from "../../store/app-stats";
 import { MainActions } from '../../store/actions/mainActions';
 
-import { ItemPage } from "../item/item";
+import { Routes } from '../../app/app.routes';
+
 
 @Component({
   selector: 'page-home',
@@ -85,7 +86,7 @@ export class HomePage implements OnInit {
 
   // doItemQuery
   doItemQuery(_item):void {
-      this.navCtrl.push(ItemPage, { itemId: _item.$key, uid: this.user.uid})
+      this.navCtrl.push(Routes.getPage(Routes.ITEM), { itemId: _item.$key, uid: this.user.uid})
       console.log('doItemQuery-> ', _item)
   }
 }
