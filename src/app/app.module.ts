@@ -9,10 +9,9 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
-// Import App Components & Pages
+// Import App Components & nav Router with DeepLinker
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ItemPage } from "../pages/item/item";
+import { Routes } from './app.routes';
 
 // Import ngrx Tools
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -27,9 +26,6 @@ import effects from '../store/effects';
 // Import Providers Services
 import { AuthService } from "../providers/auth-service";
 import { DatasService } from "../providers/datas-service";
-
-// Import nav Router with DeepLinker
-import { Routes } from './app.routes';
 
 // Import the AF2 Module + Firebase AFB_API_KEY config
 import { AngularFireModule } from 'angularfire2';

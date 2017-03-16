@@ -9,7 +9,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { Observable } from 'rxjs/Rx';
 import { Store } from '@ngrx/store';
 
 import { AppStateI } from "../../store/app-stats";
