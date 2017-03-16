@@ -1,15 +1,23 @@
+/**
+* @Author: Nicolas Fazio <webmaster-fazio>
+* @Date:   14-03-2017
+* @Email:  contact@nicolasfazio.ch
+* @Last modified by:   webmaster-fazio
+* @Last modified time: 16-03-2017
+*/
+
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HomePage } from '../pages/home/home';
+import { Routes } from './app.routes';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = HomePage;
+  rootPage: any;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -18,5 +26,12 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+
+  ngOnInit() {
+     console.log ("OnInit " +  this.rootPage)
+     this.rootPage = Routes.getRootPage(false);
+
   }
 }
