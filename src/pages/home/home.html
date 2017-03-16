@@ -1,0 +1,87 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   14-03-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 16-03-2017
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- display errors here -->
+  <ion-row responsive-sm *ngIf="(storeInfo | async)?.error">
+    <ion-col>
+      <strong>
+          <h4  style="color:red">Error:&nbsp;{{ (storeInfo | async)?.error }}</h4>
+      </strong>
+    </ion-col>
+  </ion-row>
+
+  <!-- if we have a user and then show the list of stuff -->
+  <div *ngIf="(storeInfo | async)?.currentUser">
+
+    <div padding text-center>
+        <h1>Welcome {{(storeInfo | async)?.currentUser?.auth.email}}</h1>
+    </div>
+    <ion-row responsive-sm>
+      <ion-list>
+        <button ion-item *ngFor="let item of (storeInfo | async)?.dataArray" (click)="doItemQuery(item)">
+          <div>{{item.$key}}</div>
+          <p>Date: {{item.date}} | Status: {{item.active}}</p>
+        </button>
+      </ion-list>
+    </ion-row>
+    <ion-row responsive-sm>
+      <ion-col  text-center>
+        <button ion-button (click)="doLogout()" color="primary">Logout</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <!-- if we have checked auth and still dont have a user then show login information -->
+  <div *ngIf="(storeInfo | async)?.authChecked && !(storeInfo | async)?.currentUser">
+    <form #loginForm="ngForm" novalidate>
+      <ion-item>
+        <ion-label floating color="primary">Username</ion-label>
+        <ion-input [(ngModel)]="credentials.email" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+          </ion-input>
+      </ion-item>
+      <p [hidden]="email.valid || submitted == false" color="danger" padding-left>
+        Username is required
+      </p>
+
+      <ion-item>
+        <ion-label floating color="primary">Password</ion-label>
+        <ion-input [(ngModel)]="credentials.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="password.valid || submitted == false" color="danger" padding-left>
+        Password is required
+      </p>
+
+      <ion-row responsive-sm>
+        <ion-col>
+          <button ion-button (click)="doLogin(loginForm)" type="submit" color="primary" block>Login</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button (click)="doCreateUser(loginForm)" type="submit" color="primary" block>Create User</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+
+  <!-- <pre>
+    {{ (storeInfo | async) | json }}
+  </pre> -->
+
+</ion-content>
